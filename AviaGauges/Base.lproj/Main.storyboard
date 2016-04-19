@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AviaGauges" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="haI-QL-DqG">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="530" id="liS-y8-QOK"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ufR-L8-sqE">
+                                    <size key="itemSize" width="144" height="144"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SpeedView" id="153-6t-Efr">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qj0-yu-Fet" customClass="SpeedView" customModule="AviaGauges" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Qj0-yu-Fet" firstAttribute="top" secondItem="153-6t-Efr" secondAttribute="top" id="0KM-o8-Mxy"/>
+                                            <constraint firstItem="Qj0-yu-Fet" firstAttribute="leading" secondItem="153-6t-Efr" secondAttribute="leadingMargin" constant="-8" id="CbK-HS-ueJ"/>
+                                            <constraint firstItem="Qj0-yu-Fet" firstAttribute="width" secondItem="153-6t-Efr" secondAttribute="width" id="NyM-8A-xIt"/>
+                                            <constraint firstItem="Qj0-yu-Fet" firstAttribute="leading" secondItem="153-6t-Efr" secondAttribute="leading" id="emh-iw-cSD"/>
+                                            <constraint firstItem="Qj0-yu-Fet" firstAttribute="height" secondItem="153-6t-Efr" secondAttribute="height" id="xDE-4s-nUi"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AltView" id="Yys-jw-RLt">
+                                        <rect key="frame" x="228" y="0.0" width="144" height="144"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jg3-vS-BFW" customClass="AltView" customModule="AviaGauges" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Jg3-vS-BFW" firstAttribute="leading" secondItem="Yys-jw-RLt" secondAttribute="leading" id="JEE-Ln-9U5"/>
+                                            <constraint firstItem="Jg3-vS-BFW" firstAttribute="top" secondItem="Yys-jw-RLt" secondAttribute="top" id="V9u-jO-y9n"/>
+                                            <constraint firstItem="Jg3-vS-BFW" firstAttribute="width" secondItem="Yys-jw-RLt" secondAttribute="width" id="WB8-P4-ed8"/>
+                                            <constraint firstItem="Jg3-vS-BFW" firstAttribute="height" secondItem="Yys-jw-RLt" secondAttribute="height" id="ebg-ta-6vN"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kBx-G2-PY1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xdF-o9-k9a"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3n-8f-7JU">
+                                <rect key="frame" x="0.0" y="20" width="600" height="42"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vm-HU-Zcw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c3n-8f-7JU" firstAttribute="centerX" secondItem="haI-QL-DqG" secondAttribute="centerX" id="6uy-UC-Y5r"/>
+                            <constraint firstItem="c3n-8f-7JU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8rd-Qs-QmF"/>
+                            <constraint firstItem="haI-QL-DqG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="CYn-MU-NV6"/>
+                            <constraint firstItem="haI-QL-DqG" firstAttribute="top" secondItem="c3n-8f-7JU" secondAttribute="bottom" constant="8" symbolic="YES" id="Dxe-yG-PcZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="haI-QL-DqG" secondAttribute="bottom" id="JRY-NA-gpz"/>
+                            <constraint firstItem="haI-QL-DqG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="N7l-6T-Hoi"/>
+                            <constraint firstItem="c3n-8f-7JU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="fCu-Oa-B7N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="haI-QL-DqG" id="iAy-VG-4fq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="289"/>
+        </scene>
+    </scenes>
+</document>
