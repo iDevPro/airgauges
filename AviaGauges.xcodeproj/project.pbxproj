@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9C1019F51CC40F45007DEF0B /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1019F41CC40F45007DEF0B /* DataHelper.swift */; };
+		9C7E725B1CC93FA800BB35DD /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E725A1CC93FA800BB35DD /* ClockView.swift */; };
+		9C7E725D1CC9435300BB35DD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E725C1CC9435300BB35DD /* Settings.swift */; };
 		9C9A92E01CC4362D00CDEDB1 /* SpeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A92DF1CC4362D00CDEDB1 /* SpeedView.swift */; };
 		9C9A92E21CC5748500CDEDB1 /* AltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A92E11CC5748500CDEDB1 /* AltView.swift */; };
+		9C9A92E41CC6A35C00CDEDB1 /* RpmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A92E31CC6A35C00CDEDB1 /* RpmView.swift */; };
 		9CAF8E081CC40EB2009AED25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF8E071CC40EB2009AED25 /* AppDelegate.swift */; };
-		9CAF8E0A1CC40EB2009AED25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF8E091CC40EB2009AED25 /* ViewController.swift */; };
+		9CAF8E0A1CC40EB2009AED25 /* AirGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF8E091CC40EB2009AED25 /* AirGauge.swift */; };
 		9CAF8E0D1CC40EB2009AED25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF8E0B1CC40EB2009AED25 /* Main.storyboard */; };
 		9CAF8E0F1CC40EB2009AED25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF8E0E1CC40EB2009AED25 /* Assets.xcassets */; };
 		9CAF8E121CC40EB2009AED25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF8E101CC40EB2009AED25 /* LaunchScreen.storyboard */; };
@@ -19,11 +22,14 @@
 
 /* Begin PBXFileReference section */
 		9C1019F41CC40F45007DEF0B /* DataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		9C7E725A1CC93FA800BB35DD /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		9C7E725C1CC9435300BB35DD /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9C9A92DF1CC4362D00CDEDB1 /* SpeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedView.swift; sourceTree = "<group>"; };
 		9C9A92E11CC5748500CDEDB1 /* AltView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AltView.swift; sourceTree = "<group>"; };
+		9C9A92E31CC6A35C00CDEDB1 /* RpmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RpmView.swift; sourceTree = "<group>"; };
 		9CAF8E041CC40EB2009AED25 /* AviaGauges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AviaGauges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAF8E071CC40EB2009AED25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9CAF8E091CC40EB2009AED25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CAF8E091CC40EB2009AED25 /* AirGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirGauge.swift; sourceTree = "<group>"; };
 		9CAF8E0C1CC40EB2009AED25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CAF8E0E1CC40EB2009AED25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CAF8E111CC40EB2009AED25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +47,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C7E725E1CC9435D00BB35DD /* Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				9C9A92DF1CC4362D00CDEDB1 /* SpeedView.swift */,
+				9C9A92E11CC5748500CDEDB1 /* AltView.swift */,
+				9C9A92E31CC6A35C00CDEDB1 /* RpmView.swift */,
+				9C7E725A1CC93FA800BB35DD /* ClockView.swift */,
+			);
+			name = Indicators;
+			sourceTree = "<group>";
+		};
 		9CAF8DFB1CC40EB2009AED25 = {
 			isa = PBXGroup;
 			children = (
@@ -61,14 +78,14 @@
 			isa = PBXGroup;
 			children = (
 				9CAF8E071CC40EB2009AED25 /* AppDelegate.swift */,
-				9CAF8E091CC40EB2009AED25 /* ViewController.swift */,
-				9CAF8E0B1CC40EB2009AED25 /* Main.storyboard */,
+				9CAF8E091CC40EB2009AED25 /* AirGauge.swift */,
+				9C1019F41CC40F45007DEF0B /* DataHelper.swift */,
+				9C7E725C1CC9435300BB35DD /* Settings.swift */,
 				9CAF8E0E1CC40EB2009AED25 /* Assets.xcassets */,
+				9CAF8E0B1CC40EB2009AED25 /* Main.storyboard */,
 				9CAF8E101CC40EB2009AED25 /* LaunchScreen.storyboard */,
 				9CAF8E131CC40EB2009AED25 /* Info.plist */,
-				9C1019F41CC40F45007DEF0B /* DataHelper.swift */,
-				9C9A92DF1CC4362D00CDEDB1 /* SpeedView.swift */,
-				9C9A92E11CC5748500CDEDB1 /* AltView.swift */,
+				9C7E725E1CC9435D00BB35DD /* Indicators */,
 			);
 			path = AviaGauges;
 			sourceTree = "<group>";
@@ -105,6 +122,7 @@
 				TargetAttributes = {
 					9CAF8E031CC40EB2009AED25 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VZ5Q5CVRUL;
 					};
 				};
 			};
@@ -144,9 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9A92E41CC6A35C00CDEDB1 /* RpmView.swift in Sources */,
 				9C1019F51CC40F45007DEF0B /* DataHelper.swift in Sources */,
-				9CAF8E0A1CC40EB2009AED25 /* ViewController.swift in Sources */,
+				9C7E725D1CC9435300BB35DD /* Settings.swift in Sources */,
+				9CAF8E0A1CC40EB2009AED25 /* AirGauge.swift in Sources */,
 				9C9A92E01CC4362D00CDEDB1 /* SpeedView.swift in Sources */,
+				9C7E725B1CC93FA800BB35DD /* ClockView.swift in Sources */,
 				9CAF8E081CC40EB2009AED25 /* AppDelegate.swift in Sources */,
 				9C9A92E21CC5748500CDEDB1 /* AltView.swift in Sources */,
 			);
@@ -263,10 +284,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AviaGauges/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pro.idev.itux.AviaGauges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -274,10 +298,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AviaGauges/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pro.idev.itux.AviaGauges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
