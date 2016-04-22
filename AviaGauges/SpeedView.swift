@@ -15,13 +15,6 @@ class SpeedView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let arrowCenter = UIView(frame: CGRect(x: -8, y: bounds.height/2 - 38, width: 20, height: 20))
-        arrowCenter.layer.borderWidth = 1
-        arrowCenter.layer.cornerRadius = 10;
-        arrowCenter.layer.masksToBounds = true;
-        arrowCenter.backgroundColor = UIColor.greenColor()
-        
-        
         arrow = UIView(frame: CGRect(x: bounds.width/2, y: 0, width: 4, height: bounds.height/2))
         arrow?.backgroundColor = UIColor.greenColor()
         arrow?.layer.borderWidth = 1
@@ -30,15 +23,31 @@ class SpeedView: UIView {
         layer.cornerRadius = bounds.width/2
         layer.masksToBounds = true;
         
-        arrow?.addSubview(arrowCenter)
         addSubview(arrow!)
+        
+        // Add subscription for data update
+        DataHelper.sharedInstance.addObserver(self, forKeyPath: "indicators", options: NSKeyValueObservingOptions.Initial, context: nil)
+        DataHelper.sharedInstance.addObserver(self, forKeyPath: "indicators", options: NSKeyValueObservingOptions.New, context: nil)
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        
+        let helper = object as! DataHelper
+        let gaugesData = helper.indicators
+    
+        if (gaugesData.keys.contains("speed")) {
+            let speed = gaugesData["speed"]
+            self.setSpeed(speed!, max: 155.508)
+        } else {
+            self.setSpeed(0, max: 155.508)
+        }
         
     }
     
     func setSpeed(speed: Double, max: Double) {
         UIView.animateWithDuration(0.5) {
             let currentSpeed = (speed > max) ? max : speed
-            let speedTransform = CGAffineTransformMakeRotation(CGFloat((currentSpeed * (320 * M_PI / 180)) % max))
+            let speedTransform = CGAffineTransformMakeRotation(CGFloat((currentSpeed * (320 * M_PI / 180)) / max))
             self.arrow?.transform = speedTransform
         }
     }
