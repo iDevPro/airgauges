@@ -10,6 +10,9 @@ import UIKit
 
 class AirGauge: UICollectionViewController {
 
+    
+    let gauges = ["SpeedView", "AltView", "RpmView", "ClockView"];
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -31,7 +34,7 @@ class AirGauge: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return gauges.count
     }
     
     override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
@@ -40,31 +43,28 @@ class AirGauge: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        print("cell updated")
-    
-        if indexPath == NSIndexPath(forItem: 0, inSection: 0) {
-            let speedCell = collectionView.dequeueReusableCellWithReuseIdentifier("SpeedView", forIndexPath: indexPath)
-            return speedCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("gauge", forIndexPath: indexPath)
+        switch gauges[indexPath.row] {
+        case "SpeedView":
+            let speedView = SpeedView.init(frame: cell.bounds)
+            cell.backgroundView = speedView
+            break
+        case "AltView":
+            let altView = AltView.init(frame: cell.bounds)
+            cell.backgroundView = altView
+            break
+        case "RpmView":
+            let rpmView = RpmView.init(frame: cell.bounds)
+            cell.backgroundView = rpmView
+            break
+        case "ClockView":
+            let clockView = ClockView.init(frame: cell.bounds)
+            cell.backgroundView = clockView
+            break
+        default:
+            break
         }
-        
-        if indexPath == NSIndexPath(forItem: 1, inSection: 0) {
-            let altCell = collectionView.dequeueReusableCellWithReuseIdentifier("AltView", forIndexPath: indexPath)
-            return altCell
-        }
-        
-        if indexPath == NSIndexPath(forItem: 2, inSection: 0) {
-            let rpmCell = collectionView.dequeueReusableCellWithReuseIdentifier("RpmView", forIndexPath: indexPath)
-            return rpmCell
-        }
-        
-        if indexPath == NSIndexPath(forItem: 3, inSection: 0) {
-            let clockCell = collectionView.dequeueReusableCellWithReuseIdentifier("ClockView", forIndexPath: indexPath)
-            return clockCell
-        }
-        
-        return collectionView.dequeueReusableCellWithReuseIdentifier("RpmView", forIndexPath: indexPath)
+        return cell
     }
     
-    
 }
-

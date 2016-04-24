@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BUD-Sk-2Vd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BUD-Sk-2Vd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Air Gauge-->
@@ -14,146 +13,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="QzT-4v-dfe">
-                            <size key="itemSize" width="100" height="100"/>
+                            <size key="itemSize" width="120" height="120"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SpeedView" id="Rbp-4w-Np2">
-                                <rect key="frame" x="0.0" y="50" width="100" height="100"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="playback" reuseIdentifier="gauge" id="Rbp-4w-Np2">
+                                <rect key="frame" x="0.0" y="50" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPl-cf-124" customClass="SpeedView" customModule="AviaGauges" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скорость" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co1-tU-kUw">
-                                                    <rect key="frame" x="12" y="76" width="76" height="16"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="76" id="pRN-Zw-OVL"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Co1-tU-kUw" secondAttribute="bottom" constant="8" id="JmP-gT-CiX"/>
-                                                <constraint firstItem="Co1-tU-kUw" firstAttribute="centerX" secondItem="EPl-cf-124" secondAttribute="centerX" id="XHY-gQ-t1j"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="EPl-cf-124" firstAttribute="top" secondItem="Rbp-4w-Np2" secondAttribute="top" id="9FH-mb-fSj"/>
-                                    <constraint firstAttribute="bottom" secondItem="EPl-cf-124" secondAttribute="bottom" id="XUz-mO-1RW"/>
-                                    <constraint firstItem="EPl-cf-124" firstAttribute="leading" secondItem="Rbp-4w-Np2" secondAttribute="leading" id="h8A-aD-x2f"/>
-                                    <constraint firstAttribute="trailing" secondItem="EPl-cf-124" secondAttribute="trailing" id="hmz-GL-s3I"/>
-                                </constraints>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AltView" id="8ca-VA-Zgf">
-                                <rect key="frame" x="100" y="50" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNR-Pn-ziB" customClass="AltView" customModule="AviaGauges" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Альтиметр" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lL-W0-vg1">
-                                                    <rect key="frame" x="16" y="76" width="68.5" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="8lL-W0-vg1" firstAttribute="centerX" secondItem="RNR-Pn-ziB" secondAttribute="centerX" id="MB9-tf-0aS"/>
-                                                <constraint firstItem="8lL-W0-vg1" firstAttribute="bottom" secondItem="RNR-Pn-ziB" secondAttribute="bottomMargin" id="yr4-oe-qqF"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="RNR-Pn-ziB" secondAttribute="bottom" id="JJI-iq-ORE"/>
-                                    <constraint firstAttribute="trailing" secondItem="RNR-Pn-ziB" secondAttribute="trailing" id="Lqo-si-Irb"/>
-                                    <constraint firstItem="RNR-Pn-ziB" firstAttribute="leading" secondItem="8ca-VA-Zgf" secondAttribute="leading" id="SZf-KR-Y1H"/>
-                                    <constraint firstItem="RNR-Pn-ziB" firstAttribute="top" secondItem="8ca-VA-Zgf" secondAttribute="top" id="ps6-jV-ax3"/>
-                                </constraints>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RpmView" id="ttB-Yc-fg4">
-                                <rect key="frame" x="200" y="50" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azO-JX-kIV" customClass="RpmView" customModule="AviaGauges" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обороты" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14m-ky-YZD">
-                                                    <rect key="frame" x="21.5" y="76" width="57" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="14m-ky-YZD" firstAttribute="centerX" secondItem="azO-JX-kIV" secondAttribute="centerX" id="dK6-pn-E0X"/>
-                                                <constraint firstItem="14m-ky-YZD" firstAttribute="bottom" secondItem="azO-JX-kIV" secondAttribute="bottomMargin" id="pgl-Se-xl1"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="azO-JX-kIV" secondAttribute="trailing" id="iFT-I1-Ot1"/>
-                                    <constraint firstItem="azO-JX-kIV" firstAttribute="leading" secondItem="ttB-Yc-fg4" secondAttribute="leading" id="oD6-Mv-Gje"/>
-                                    <constraint firstAttribute="bottom" secondItem="azO-JX-kIV" secondAttribute="bottom" id="rSX-ex-NOm"/>
-                                    <constraint firstItem="azO-JX-kIV" firstAttribute="top" secondItem="ttB-Yc-fg4" secondAttribute="top" id="uVK-sN-dTW"/>
-                                </constraints>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClockView" id="vUK-GS-F7b">
-                                <rect key="frame" x="300" y="50" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGs-vJ-Bfu" customClass="ClockView" customModule="AviaGauges" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Часы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uao-LE-BF0">
-                                                    <rect key="frame" x="34" y="76" width="32.5" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="Uao-LE-BF0" firstAttribute="bottom" secondItem="FGs-vJ-Bfu" secondAttribute="bottomMargin" id="Dc8-uA-hBi"/>
-                                                <constraint firstItem="Uao-LE-BF0" firstAttribute="centerX" secondItem="FGs-vJ-Bfu" secondAttribute="centerX" id="YSe-tU-Hxy"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="FGs-vJ-Bfu" secondAttribute="bottom" id="Q03-lw-3ah"/>
-                                    <constraint firstItem="FGs-vJ-Bfu" firstAttribute="leading" secondItem="vUK-GS-F7b" secondAttribute="leading" id="aOZ-Js-kXT"/>
-                                    <constraint firstItem="FGs-vJ-Bfu" firstAttribute="top" secondItem="vUK-GS-F7b" secondAttribute="top" id="c80-dm-T2z"/>
-                                    <constraint firstAttribute="trailing" secondItem="FGs-vJ-Bfu" secondAttribute="trailing" id="xSf-hb-u7H"/>
-                                </constraints>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="AmM-2j-4f3">
@@ -224,7 +97,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hE-fN-1yb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="207"/>
+            <point key="canvasLocation" x="29" y="207"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Rsf-FM-M6X">

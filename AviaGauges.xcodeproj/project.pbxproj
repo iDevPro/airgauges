@@ -18,6 +18,7 @@
 		9CAF8E0D1CC40EB2009AED25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF8E0B1CC40EB2009AED25 /* Main.storyboard */; };
 		9CAF8E0F1CC40EB2009AED25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF8E0E1CC40EB2009AED25 /* Assets.xcassets */; };
 		9CAF8E121CC40EB2009AED25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF8E101CC40EB2009AED25 /* LaunchScreen.storyboard */; };
+		B1B779F11CCD65EB00F4C5DA /* GaugesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B779F01CCD65EB00F4C5DA /* GaugesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9CAF8E0E1CC40EB2009AED25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CAF8E111CC40EB2009AED25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CAF8E131CC40EB2009AED25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B779F01CCD65EB00F4C5DA /* GaugesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		9C7E725E1CC9435D00BB35DD /* Indicators */ = {
 			isa = PBXGroup;
 			children = (
+				B1B779F01CCD65EB00F4C5DA /* GaugesView.swift */,
 				9C9A92DF1CC4362D00CDEDB1 /* SpeedView.swift */,
 				9C9A92E11CC5748500CDEDB1 /* AltView.swift */,
 				9C9A92E31CC6A35C00CDEDB1 /* RpmView.swift */,
@@ -164,6 +167,7 @@
 			files = (
 				9C9A92E41CC6A35C00CDEDB1 /* RpmView.swift in Sources */,
 				9C1019F51CC40F45007DEF0B /* DataHelper.swift in Sources */,
+				B1B779F11CCD65EB00F4C5DA /* GaugesView.swift in Sources */,
 				9C7E725D1CC9435300BB35DD /* Settings.swift in Sources */,
 				9CAF8E0A1CC40EB2009AED25 /* AirGauge.swift in Sources */,
 				9C9A92E01CC4362D00CDEDB1 /* SpeedView.swift in Sources */,
