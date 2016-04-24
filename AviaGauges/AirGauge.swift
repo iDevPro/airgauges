@@ -12,11 +12,15 @@ class AirGauge: UICollectionViewController {
 
     
     let gauges = ["SpeedView", "AltView", "RpmView", "ClockView"];
+    var longPressGesture: UILongPressGestureRecognizer? = nil
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(AirGauge.handleLongGesture(_:)))
+        self.collectionView!.addGestureRecognizer(longPressGesture!)
         
     }
     
@@ -42,6 +46,10 @@ class AirGauge: UICollectionViewController {
         return headerView
     }
     
+    override func collectionView(collectionView: UICollectionView, moveItemAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        print("from: \(sourceIndexPath.row) to: \(destinationIndexPath.row)")
+    }
+    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("gauge", forIndexPath: indexPath)
         switch gauges[indexPath.row] {
@@ -65,6 +73,24 @@ class AirGauge: UICollectionViewController {
             break
         }
         return cell
+    }
+    
+    func handleLongGesture(gesture: UILongPressGestureRecognizer) {
+        
+        switch(gesture.state) {
+            
+        case UIGestureRecognizerState.Began:
+            guard let selectedIndexPath = self.collectionView!.indexPathForItemAtPoint(gesture.locationInView(self.collectionView)) else {
+                break
+            }
+            collectionView!.beginInteractiveMovementForItemAtIndexPath(selectedIndexPath)
+        case UIGestureRecognizerState.Changed:
+            collectionView!.updateInteractiveMovementTargetPosition(gesture.locationInView(gesture.view!))
+        case UIGestureRecognizerState.Ended:
+            collectionView!.endInteractiveMovement()
+        default:
+            collectionView!.cancelInteractiveMovement()
+        }
     }
     
 }
